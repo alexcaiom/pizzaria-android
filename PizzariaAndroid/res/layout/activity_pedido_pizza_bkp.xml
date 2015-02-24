@@ -1,0 +1,552 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.fabiano.pizzaria.PedidoPizzaActivity" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/tela_pedido_pizza_titulo_fundo"
+        >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/label_pizza"
+	        android:textColor="@color/symptom_color_selected"
+	         />
+   	</LinearLayout>
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        >
+	        
+	    
+		    <!-- Linha Green Peppers -->
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			    <!-- Titulos -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            >
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_green_peppers"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentTop="true"/>
+		            
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_tap_to_remove"
+			            android:layout_alignParentRight="true"
+			            android:layout_alignParentTop="true"
+			            android:textColor="@color/gray"/>
+		            
+		        </RelativeLayout>
+		        
+		        <!-- Seletores -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content">
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentLeft="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.greenpeppers.btnEsquerda"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_left"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.greenpeppers.img"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/pepper"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.greenpeppers.btnDireita"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_right"
+		                    />
+		            </LinearLayout>
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.greenpeppers.btnMais"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_menos"
+		                    />
+		
+		                <TextView
+		                    android:id="@+id/pizza.pedido.greenpeppers.quantidade"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center_vertical"
+		                    android:text="@string/label_normal" />
+		
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.greenpeppers.btnMenos"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_mais"
+		                    />
+		            </LinearLayout>
+		        </RelativeLayout>
+		        
+		    </LinearLayout>
+		    <!-- /Linha Green Peppers -->
+		    
+		    <!-- Linha Jalapeno Peppers -->
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			    <!-- Titulos -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            >
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_jalepeno_peppers"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentTop="true"/>
+		            
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_tap_to_remove"
+			            android:layout_alignParentRight="true"
+			            android:layout_alignParentTop="true"
+			            android:textColor="@color/gray"/>
+		            
+		        </RelativeLayout>
+		        
+		        <!-- Seletores -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content">
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentLeft="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.jalapenopeppers.btnEsquerda"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_left"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.jalapenopeppers.img"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/pepper"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.jalapenopeppers.btnDireita"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_right"
+		                    />
+		            </LinearLayout>
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.jalapenopeppers.btnMais"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_menos"
+		                    />
+		
+		                <TextView
+		                    android:id="@+id/pizza.pedido.jalapenopeppers.quantidade"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center_vertical"
+		                    android:text="@string/label_normal" />
+		
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.jalapenopeppers.btnMenos"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_mais"
+		                    />
+		            </LinearLayout>
+		        </RelativeLayout>
+		        
+		    </LinearLayout>
+		    <!-- /Linha Jalapeno Peppers -->
+		    
+		    <!-- Linha Mushrooms -->
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			    <!-- Titulos -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            >
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_mushrooms"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentTop="true"/>
+		            
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_tap_to_remove"
+			            android:layout_alignParentRight="true"
+			            android:layout_alignParentTop="true"
+			            android:textColor="@color/gray"/>
+		            
+		        </RelativeLayout>
+		        
+		        <!-- Seletores -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content">
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentLeft="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.mushrooms.btnEsquerda"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_left"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.mushrooms.img"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/pepper"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.mushrooms.btnDireita"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_right"
+		                    />
+		            </LinearLayout>
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.mushrooms.btnMais"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_menos"
+		                    />
+		
+		                <TextView
+		                    android:id="@+id/pizza.pedido.mushrooms.quantidade"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center_vertical"
+		                    android:text="@string/label_normal" />
+		
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.mushrooms.btnMenos"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_mais"
+		                    />
+		            </LinearLayout>
+		        </RelativeLayout>
+		        
+		    </LinearLayout>
+		    <!-- /Linha Mushrooms -->
+		    
+		    <!-- Linha Pinnapple -->
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			    <!-- Titulos -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            >
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_pineapple"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentTop="true"/>
+		            
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_tap_to_remove"
+			            android:layout_alignParentRight="true"
+			            android:layout_alignParentTop="true"
+			            android:textColor="@color/gray"/>
+		            
+		        </RelativeLayout>
+		        
+		        <!-- Seletores -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content">
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentLeft="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.pineapple.btnEsquerda"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_left"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.pineapple.img"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/pepper"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.pineapple.btnDireita"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_right"
+		                    />
+		            </LinearLayout>
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.pineapple.btnMais"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_menos"
+		                    />
+		
+		                <TextView
+		                    android:id="@+id/pizza.pedido.pineapple.quantidade"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center_vertical"
+		                    android:text="@string/label_normal" />
+		
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.pineapple.btnMenos"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_mais"
+		                    />
+		            </LinearLayout>
+		        </RelativeLayout>
+		        
+		    </LinearLayout>
+		    <!-- /Linha Pinnapple -->
+		    
+		    <!-- Linha Onions -->
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			    <!-- Titulos -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            >
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_onions"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentTop="true"/>
+		            
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_tap_to_remove"
+			            android:layout_alignParentRight="true"
+			            android:layout_alignParentTop="true"
+			            android:textColor="@color/gray"/>
+		            
+		        </RelativeLayout>
+		        
+		        <!-- Seletores -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content">
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentLeft="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.onions.btnEsquerda"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_left"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.onions.img"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/pepper"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.onions.btnDireita"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_right"
+		                    />
+		            </LinearLayout>
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.onions.btnMais"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_menos"
+		                    />
+		
+		                <TextView
+		                    android:id="@+id/pizza.pedido.onions.quantidade"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center_vertical"
+		                    android:text="@string/label_normal" />
+		
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.onions.btnMenos"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_mais"
+		                    />
+		            </LinearLayout>
+		        </RelativeLayout>
+		        
+		    </LinearLayout>
+		    <!-- /Linha Onions -->
+		    
+		    <!-- Linha Roasted Red Peppers -->
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			    <!-- Titulos -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            >
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_roasted_red_peppers"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentTop="true"/>
+		            
+		            <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_tap_to_remove"
+			            android:layout_alignParentRight="true"
+			            android:layout_alignParentTop="true"
+			            android:textColor="@color/gray"/>
+		            
+		        </RelativeLayout>
+		        
+		        <!-- Seletores -->
+		        <RelativeLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content">
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentLeft="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.roastedredpeppers.btnEsquerda"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_left"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.roastedredpeppers.img"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/pepper"
+		                    />
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.roastedredpeppers.btnDireita"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/arrow_right"
+		                    />
+		            </LinearLayout>
+		            <LinearLayout 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true">
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.roastedredpeppers.btnMais"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_menos"
+		                    />
+		
+		                <TextView
+		                    android:id="@+id/pizza.pedido.roastedredpeppers.quantidade"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="center_vertical"
+		                    android:text="@string/label_normal" />
+		
+		                <ImageView 
+		                    android:id="@+id/pizza.pedido.roastedredpeppers.btnMenos"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:src="@drawable/btn_mais"
+		                    />
+		            </LinearLayout>
+		        </RelativeLayout>
+		        
+		    </LinearLayout>
+		    <!-- /Linha Roasted Red Peppers -->
+	        
+	        <Button 
+	            android:id="@+id/tela.pedido.pizza.btnResumoPedido"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Resumo"
+	            />
+	        
+	    </LinearLayout>
+    </ScrollView>
+    
+
+</LinearLayout>
