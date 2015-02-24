@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, SimpleCalendar!</string>
-    <string name="app_name">Smart Pizzaria</string>
+    <string name="app_name">Cadê a Pizza</string>
     <string name="action_settings">Configurações</string>
     <string name="title_activity_calendario">Calendário</string>
     <string name="title_activity_login">Login</string>
