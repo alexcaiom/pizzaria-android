@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Linha Green Peppers -->
+    <!-- Titulos -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/item.ingrediente.pizza.lblNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_green_peppers" />
+
+        <TextView
+            android:id="@+id/item.ingrediente.pizza.lblTapToAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tap_to_remove"
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+    <!-- Seletores -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+
+            <ImageView
+                android:id="@+id/item.ingrediente.pizza.btnEsquerda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_left" />
+
+            <ImageView
+                android:id="@+id/item.ingrediente.pizza.img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pepper" />
+
+            <ImageView
+                android:id="@+id/item.ingrediente.pizza.btnDireita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <ImageView
+                android:id="@+id/item.ingrediente.pizza.btnMais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_menos" />
+
+            <TextView
+                android:id="@+id/item.ingrediente.pizza.quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/label_normal" />
+
+            <ImageView
+                android:id="@+id/item.ingrediente.pizza.btnMenos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_mais" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tela_pedido_status_fundo"
+    tools:context="com.fabiano.pizzaria.PedidoResumoActivity" >
+    <!--  -->
+    <!-- android:orientation="vertical" -->
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/quadro.botoes"
+        android:background="@drawable/pedido_resumo_barra_botoes"
+         >
+        <Button 
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/pedido_resumo_btn_menu"
+            />
+        
+        <Button 
+            android:id="@+id/btnCupons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/pedido_resumo_btn_cupons"
+            />
+    </RelativeLayout>
+    
+    <TextView 
+        android:id="@+id/txtCupons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cupons"
+        android:layout_below="@+id/quadro.botoes"
+        />
+    
+    <ScrollView 
+        android:id="@+id/listaCuponsConteiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCupons"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    	android:layout_marginRight="@dimen/activity_horizontal_margin"
+        >
+        <LinearLayout 
+            android:id="@+id/tela.pedido.resumo.listaCupons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            
+            
+        </LinearLayout>
+    </ScrollView>
+        
+    
+    <TextView 
+        android:id="@+id/lblProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Produtos:"
+        android:layout_below="@+id/listaCuponsConteiner"
+        />
+        
+    <ScrollView 
+        android:id="@+id/listaProdutosConteiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblProdutos"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    	android:layout_marginRight="@dimen/activity_horizontal_margin"
+        >
+        <LinearLayout 
+            android:id="@+id/tela.pedido.resumo.listaProdutos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            
+            
+            
+        </LinearLayout>
+    </ScrollView>
+    
+    <RelativeLayout
+        android:id="@+id/quadro.rodape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+         >
+        
+        <Button 
+            android:id="@+id/tela.pedido.resumo.btnFinalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalizar"
+            android:layout_alignParentLeft="true"
+            />
+        <TextView 
+            android:id="@+id/tela.pedido.resumo.valorTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: R$ 12.94"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

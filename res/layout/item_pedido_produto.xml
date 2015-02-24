@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout 
+        android:id="@+id/item.pedido.produto.design.top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_quadro_status_pedido_top"
+        >
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/item.pedido.produto.design.mid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_quadro_status_pedido_mid"
+        android:layout_below="@+id/item.pedido.produto.design.top"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        >
+        <!-- Produto -->
+
+    <ImageView
+        android:id="@+id/pedido.item.img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_menu_pizza" />
+
+    <TextView
+        android:id="@+id/pedido.item.produto.nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pedido.item.img"
+        android:text="Pizza" />
+
+    <TextView
+        android:id="@+id/pedido.item.produto.medida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pedido.item.produto.nome"
+        android:layout_toRightOf="@+id/pedido.item.img"
+        android:text="Medium (12&apos;&apos;) - Hand Tossed" />
+
+    <TextView
+        android:id="@+id/pedido.item.produto.ingredientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pedido.item.img"
+        android:text="Robust Inspired Tomato Sauce, Pepperoni, Cheese, Green Peppers" />
+
+    <TextView
+        android:id="@+id/pedido.item.produdo.preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="R$ 5.99" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/pedido.item.produto.design.low"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_quadro_status_pedido_low"
+        android:layout_below="@+id/item.pedido.produto.design.mid"
+        >
+    </RelativeLayout>
+
+</RelativeLayout> <!-- /Produto -->
